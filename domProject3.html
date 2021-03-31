@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomProject3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color: lightcoral;
+        }
+        .container{
+            width: 600px;
+            height:400px;
+            margin: 100px 350px;
+            padding: 100px 200px;
+        }
+        
+        button{
+            width:100px;
+            height: 40px;
+            border: none;
+            background-color: lightseagreen;
+            margin: 3px 3px;
+            font-size: large;
+
+        }
+
+        h1{
+            font-size: 800%;
+            margin: 10px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="box">1</h1>
+        <button onclick="rise()">increase</button>
+        <button onclick="fall()">decrease</button>
+    </div>
+
+
+    <script>
+        function rise(){
+            var catchH1=document.body.querySelector("h1");
+            var num=Number(catchH1.innerText);
+            num=num+1
+            catchH1.innerText=num;
+
+        }
+        function fall(){
+            var catchH1=document.body.querySelector("h1");
+            var num=Number(catchH1.innerText);
+            num=num-1
+            catchH1.innerText=num;
+
+        }
+
+            
+        
+
+    </script>
+</body>
+</html>
